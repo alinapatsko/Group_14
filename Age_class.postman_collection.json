@@ -1,0 +1,2479 @@
+{
+	"info": {
+		"_postman_id": "c3395df9-e7a1-4480-bce9-f8a2f57f9d6f",
+		"name": "Practical_lesson_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "age_europe -11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe -1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 17",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "17",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 18",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 19",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 33",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "33",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 48",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "48",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 49",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "49",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 50",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 51",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "51",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 77",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "77",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 99",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 100",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 101",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_europe 121",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity'\r",
+							"  console.log (age_type_1)\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"    });\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "121",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa -11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa -1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 19",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age ",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'underage';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 21",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 33",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "33",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 48",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "48",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 49",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'adult';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '17';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "49",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 50",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 51",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "51",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 77",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "77",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 99",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 100",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = '8';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(age_type_1));\r",
+							"    console.log (resp_data.content.length + ' = ' + age_type_1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 101",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age_usa 121",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('age_europe', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('age_type', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"  let age_type_1 = 'antiquity';\r",
+							"  console.log (age_type_1);\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(age_type_1);\r",
+							"    console.log (resp_data.age_type + ' = ' + age_type_1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test('acontent', function () {\r",
+							"  let req_data = request.data;\r",
+							"  let resp_data = pm.response.json();\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.below(1);        // значение content должно быть < 1\r",
+							"    console.log (resp_data.content.length + ' < ' + 1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "121",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
